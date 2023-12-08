@@ -98,5 +98,12 @@ namespace DAL
                 return bd.SaveChanges() > 0;
             }
         }
+        public static Usuarios Registro(int IdRegistro)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                return bd.Usuarios.Find(IdRegistro);
+            }
+        }
     }
 }

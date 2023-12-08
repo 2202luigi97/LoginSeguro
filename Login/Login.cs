@@ -81,28 +81,7 @@ namespace Login
         }
         #endregion
         #region Eventos
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-            
-        }
-
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void textBox2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {

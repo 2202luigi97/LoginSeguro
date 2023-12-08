@@ -152,6 +152,18 @@
   <ItemGroup>
     <None Include="Resources\PhEyeSlashThin.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaterialSymbolsMinimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaterialSymbolsMinimize %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FluentMdl2ChromeMinimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FluentSubtract12Filled.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -63,6 +63,46 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FluentMdl2ChromeMinimize {
+            get {
+                object obj = ResourceManager.GetObject("FluentMdl2ChromeMinimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FluentSubtract12Filled {
+            get {
+                object obj = ResourceManager.GetObject("FluentSubtract12Filled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MaterialSymbolsMinimize {
+            get {
+                object obj = ResourceManager.GetObject("MaterialSymbolsMinimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MaterialSymbolsMinimize__1_ {
+            get {
+                object obj = ResourceManager.GetObject("MaterialSymbolsMinimize (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MingcuteCloseFill {
             get {
                 object obj = ResourceManager.GetObject("MingcuteCloseFill", resourceCulture);

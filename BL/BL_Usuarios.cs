@@ -59,5 +59,9 @@ namespace BL
         {
             return DAL_Usuario.RestablecerIntentosFallido(IdRegistro, IdUsuarioActualiza);
         }
+        public static Usuarios Registro(int IdRegistro)
+        {
+            return DAL_Usuario.Registro(IdRegistro);
+        }
     }
 }

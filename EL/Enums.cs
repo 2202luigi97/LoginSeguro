@@ -9,15 +9,16 @@ namespace EL
         {
             AdministracionUsuario = 1,
             Ventas = 2,
-            Inventario = 3
+            Inventario = 3,
+            Reportes = 5
         }
         //Definir valor a los Roles
         public enum eRoles
         {
             Administrador = 1,
-            Caja = 2,
-            Bodega = 3,
-            Gerencia = 4,
+            Jefe_Ventas = 2,
+            Jefe_Almacen = 3,
+            Gerente_General = 4,
             Invitado = 5
         }
         //Definir valor de los Permisos
