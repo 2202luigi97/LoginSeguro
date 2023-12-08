@@ -1,14 +1,6 @@
 ﻿using BL;
 using EL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utilidades;
 using static EL.Enums;
@@ -77,6 +69,11 @@ namespace Login
                 MessageBox.Show("La contraseña no cumple con los requisitos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+            if (!General.ValidarSinEspacios(txtPassword.Text))
+            {
+                MessageBox.Show("La contraseña no debe contener espacios", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
             return true;
 
         }
@@ -95,27 +92,36 @@ namespace Login
                     if (BL_Usuarios.RegistrarUsuarioInvitado(user).IdUsuario>0) 
                     {
                         ResetControles();
-                        MessageBox.Show($"Usuario registrado con éxito. ID: {user.IdUsuario}", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Registro con exito, pongase en contacto con el admin para que le asigne un rol", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Hide();
+                        Login lo = new Login();
+                        lo.Show();
                         return;
                     }
                     MessageBox.Show("Usuario no registrado", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine($"Error en DAL: {ex.Message}");
-                if (ex.InnerException != null)
-                {
-                    Console.WriteLine($"Inner Exception: {ex.InnerException.Message}");
-                }
-
-                // Puedes lanzar la excepción nuevamente si lo deseas
-                throw;
+                
             }
         }
         #endregion
         #region Eventos
+        private void pbMostrarConstraseña_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+
+            if (txtPassword.UseSystemPasswordChar)
+            {
+                pbMostrarConstraseña.Image = Properties.Resources.PhEyeThin;
+            }
+            else
+            {
+                pbMostrarConstraseña.Image = Properties.Resources.PhEyeSlashThin;
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Login lo = new Login();
@@ -141,8 +147,8 @@ namespace Login
         }
 
 
-        #endregion
 
+        #endregion
 
     }
 }

@@ -1,16 +1,8 @@
 ﻿using BL;
 using EL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Utilidades;
 
 namespace Login
 {
@@ -73,43 +65,48 @@ namespace Login
                 }
                 if (!(usuarioautenticado.IdRol > 0))
                 {
-                    Mensaje("Estimado usuario usted no cuenta con un rol en el sistema, comuniquese con el administrador", eMessage.Alerta);
+                    MessageBox.Show("Estimado usuario usted no cuenta con un rol en el sistema, comuniquese con el administrador", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
-                Session["IdUsuarioGl"] = usuarioautenticado.IdUsuario;
-                Session["IdRolGl"] = usuarioautenticado.IdRol;
-                Mensaje("Acceso Correcto", eMessage.Exito);
-                Response.Redirect("~/Principal.aspx");
+                this.Hide();
+                Principal re = new Principal();
+                re.IdUsuario = usuarioautenticado.IdUsuario;
+                re.Nombre = usuarioautenticado.Nombre;
+                re.IdRol = usuarioautenticado.IdRol;
+                Roles rol = BL_Roles.ObtenerRolPorId(usuarioautenticado.IdRol);
+                re.NombreRol = rol != null ? rol.Rol : "Rol no encontrado";
+                re.Show();
             }
             return true;
         }
         #endregion
+        #region Eventos
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
             
         }
 
         private void textBox1_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            
 
-            
+
+
         }
 
         private void textBox2_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-
+            validarAccesos();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -157,5 +154,21 @@ namespace Login
                 isDragging = false;
             }
         }
+        private void pbMostrarConstraseña_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+
+            if (txtPassword.UseSystemPasswordChar)
+            {
+                pbMostrarConstraseña.Image = Properties.Resources.PhEyeThin;
+            }
+            else
+            {
+                pbMostrarConstraseña.Image = Properties.Resources.PhEyeSlashThin;
+            }
+        }
+        #endregion
+
+
     }
 }
