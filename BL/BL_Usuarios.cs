@@ -39,5 +39,25 @@ namespace BL
         {
             return DAL_Usuario.ValidarCredenciales(UserName, Password);
         }
+        public static Usuarios ExisteUsuario_x_UserName(string UserName)
+        {
+            return DAL_Usuario.ExisteUsuario_x_UserName(UserName);
+        }
+        public static short CantidadIntentosFallidos(string UserName)
+        {
+            return DAL_Usuario.CantidadIntentosFallidos(UserName);
+        }
+        public static bool BloquearCuentaUsuario(int IdRegistro, bool Bloquear, int IdUsuarioActualiza)
+        {
+            return DAL_Usuario.BloquearCuentaUsuario(IdRegistro, Bloquear, IdUsuarioActualiza);
+        }
+        public static bool SumarIntentosFallido(int IdRegistro)
+        {
+            return DAL_Usuario.SumarIntentosFallido(IdRegistro);
+        }
+        public static bool RestablecerIntentosFallido(int IdRegistro, int IdUsuarioActualiza)
+        {
+            return DAL_Usuario.RestablecerIntentosFallido(IdRegistro, IdUsuarioActualiza);
+        }
     }
 }

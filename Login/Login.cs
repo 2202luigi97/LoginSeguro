@@ -56,7 +56,7 @@ namespace Login
                 if (BL_Usuarios.CantidadIntentosFallidos(txtUsuario.Text) >= 2)
                 {
                     BL_Usuarios.BloquearCuentaUsuario(user.IdUsuario, true, user.IdUsuario);
-                    Mensaje(Justify("Su cuenta ha sido bloqueada por multiples intentos fallidos de iniciar sesion, porfavor comuniquese con un admin. del sistema"), eMessage.Error, "", true, true, false, "", false);
+                    MessageBox.Show("Su cuenta ha sido bloqueada por multiples intentos de inicio de sesión", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 if (user != null)
                 {
@@ -67,7 +67,7 @@ namespace Login
             Usuarios usuarioautenticado = BL_Usuarios.ExisteUsuario_x_UserName(txtUsuario.Text);
             if (usuarioautenticado != null)
             {
-                if (usuarioautenticado.IntentosFallidos > 0)
+                if (usuarioautenticado.Contador > 0)
                 {
                     BL_Usuarios.RestablecerIntentosFallido(usuarioautenticado.IdUsuario, usuarioautenticado.IdUsuario);
                 }

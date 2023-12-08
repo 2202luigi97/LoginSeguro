@@ -27,7 +27,6 @@ namespace DAL
                 return Entidad;
             }
         }
-
         public static bool ExisteUserName(string UserName)
         {
             using (BDContexto bd = new BDContexto())
@@ -35,7 +34,6 @@ namespace DAL
                 return bd.Usuarios.Where(a => a.UserName.ToLower()== UserName.ToLower()).Count()>0;
             }
         }
-
         public static byte[] Encrypt(string FlatString)
         {
             return Encripty.Encrypt(FlatString, key, IV);
@@ -52,6 +50,52 @@ namespace DAL
             using (BDContexto bd = new BDContexto())
             {
                 return bd.Usuarios.Where(a => a.UserName.ToLower() == UserName && a.Password == Password).Count()>0;
+            }
+        }
+        public static Usuarios ExisteUsuario_x_UserName(string UserName) 
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                return bd.Usuarios.Where(a=>a.UserName.ToLower()==UserName.ToLower()).SingleOrDefault();
+            }
+        }
+        public static short CantidadIntentosFallidos(string UserName)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                return bd.Usuarios.Where(a => a.UserName.ToLower() == UserName.ToLower()).SingleOrDefault().Contador;
+            }
+        }
+        public static bool BloquearCuentaUsuario(int IdRegistro, bool Bloquear, int UsuarioActualiza)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                var Registro = bd.Usuarios.Find(IdRegistro);
+                Registro.Bloqueo = Bloquear;
+                if (!Bloquear) { Registro.Contador = 0; }
+                Registro.UsuarioActualiza = UsuarioActualiza;
+                Registro.FechaActualizacion = DateTime.Now;
+                return bd.SaveChanges() > 0;
+            }
+        }
+        public static bool SumarIntentosFallido(int IdRegistro)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                var Registro = bd.Usuarios.Find(IdRegistro);
+                Registro.Contador = Convert.ToInt16(Registro.Contador + 1);
+                return bd.SaveChanges() > 0;
+            }
+        }
+        public static bool RestablecerIntentosFallido(int IdRegistro, int UsuarioActualiza)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                var Registro = bd.Usuarios.Find(IdRegistro);
+                Registro.Contador = 0;
+                Registro.UsuarioActualiza = UsuarioActualiza;
+                Registro.FechaActualizacion = DateTime.Now;
+                return bd.SaveChanges() > 0;
             }
         }
     }
