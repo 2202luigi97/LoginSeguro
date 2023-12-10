@@ -17,6 +17,13 @@ namespace DAL
             }
             
         }
+        public static List<Roles> List(bool Activo = true)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                return bd.Roles.Where(a => a.Activo == Activo).ToList();
+            }
+        }
 
     }
 }

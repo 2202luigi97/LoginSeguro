@@ -105,5 +105,49 @@ namespace DAL
                 return bd.Usuarios.Find(IdRegistro);
             }
         }
+        public static List<vUsuarios> vUsuarios(bool Activo = true)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                var Consulta = (from tblUsuarios in bd.Usuarios
+                                join tblRoles in bd.Roles on tblUsuarios.IdRol equals tblRoles.IdRol
+                                where tblUsuarios.Activo == Activo && tblRoles.Activo == Activo
+                                select new vUsuarios
+                                {
+                                    IdUsuario = tblUsuarios.IdUsuario,
+                                    Nombre = tblUsuarios.Nombre,
+                                    Correo = tblUsuarios.Correo,
+                                    UserName = tblUsuarios.UserName,
+                                    Bloqueo = tblUsuarios.Bloqueo,
+                                    CuentaBloqueada = (tblUsuarios.Bloqueo) ? "SI" : "NO",
+                                    Contador = tblUsuarios.Contador,
+                                    IdRol = tblUsuarios.IdRol,
+                                    Rol = tblRoles.Rol
+                                }).ToList();
+                return Consulta;
+            }
+        }
+        public static vUsuarios vUsuario(int IdRegistro)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                var Consulta = (from tblUsuarios in bd.Usuarios
+                                join tblRoles in bd.Roles on tblUsuarios.IdRol equals tblRoles.IdRol
+                                where tblUsuarios.Activo == true && tblRoles.Activo == true && tblUsuarios.IdUsuario == IdRegistro
+                                select new vUsuarios
+                                {
+                                    IdUsuario = tblUsuarios.IdUsuario,
+                                    Nombre = tblUsuarios.Nombre,
+                                    Correo = tblUsuarios.Correo,
+                                    UserName = tblUsuarios.UserName,
+                                    Bloqueo = tblUsuarios.Bloqueo,
+                                    CuentaBloqueada = (tblUsuarios.Bloqueo) ? "SI" : "NO",
+                                    Contador = tblUsuarios.Contador,
+                                    IdRol = tblUsuarios.IdRol,
+                                    Rol = tblRoles.Rol
+                                }).SingleOrDefault();
+                return Consulta;
+            }
+        }
     }
 }

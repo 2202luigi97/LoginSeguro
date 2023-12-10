@@ -14,5 +14,9 @@ namespace BL
         {
             return DAL_Roles.ObtenerRolPorId(idRol);
         }
+        public static List<Roles> List(bool Activo = true)
+        {
+            return DAL_Roles.List(Activo);
+        }
     }
 }

@@ -48,4 +48,19 @@ namespace EL
 
         public DateTime? FechaActualizacion { get; set; }
     }
+
+    public class vUsuarios
+    {
+        [Key]
+        public int IdUsuario { get;set; }
+        public string Nombre { get; set; }
+        public string Correo { get; set; }
+        public string UserName { get; set; }
+        public bool Bloqueo { get; set; }
+        public string CuentaBloqueada { get; set; }
+        public short Contador { get; set; }
+        public int IdRol { get; set; }
+        public string Rol { get; set; }
+
+    }
 }

@@ -164,6 +164,30 @@
   <ItemGroup>
     <None Include="Resources\FluentSubtract12Filled.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MdiCart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MdiCart %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MdiCart %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MdiWarehouse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MdiFileChart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MdiSecurity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MdiAccountLockOutline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MdiAccountLock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
