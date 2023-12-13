@@ -63,6 +63,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap desarrollador {
+            get {
+                object obj = ResourceManager.GetObject("desarrollador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap FluentMdl2ChromeMinimize {
             get {
                 object obj = ResourceManager.GetObject("FluentMdl2ChromeMinimize", resourceCulture);
@@ -246,6 +256,26 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap PhEyeThin {
             get {
                 object obj = ResourceManager.GetObject("PhEyeThin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap software_espia {
+            get {
+                object obj = ResourceManager.GetObject("software-espia", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap software_espia_unscreen {
+            get {
+                object obj = ResourceManager.GetObject("software-espia-unscreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

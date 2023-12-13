@@ -71,5 +71,17 @@ namespace BL
         {
             return DAL_Usuario.vUsuario(IdRegistro);
         }
+        public static bool Update(Usuarios Entidad, bool UpdatePassword)
+        {
+            return DAL_Usuario.Update(Entidad, UpdatePassword);
+        }
+        public static Usuarios Insert(Usuarios Entidad)
+        {
+            return DAL_Usuario.Insert(Entidad);
+        }
+        public static bool ExisteUserNameUpdate(string UserName, int IdRegistro)
+        {
+            return DAL_Usuario.ExisteUserNameUpdate(UserName, IdRegistro);
+        }
     }
 }

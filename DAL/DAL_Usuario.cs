@@ -27,6 +27,17 @@ namespace DAL
                 return Entidad;
             }
         }
+        public static Usuarios Insert(Usuarios Entidad)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                Entidad.Activo = true;
+                Entidad.FechaRegistro = DateTime.Now;
+                bd.Usuarios.Add(Entidad);
+                bd.SaveChanges();
+                return Entidad;
+            }
+        }
         public static bool ExisteUserName(string UserName)
         {
             using (BDContexto bd = new BDContexto())
@@ -147,6 +158,31 @@ namespace DAL
                                     Rol = tblRoles.Rol
                                 }).SingleOrDefault();
                 return Consulta;
+            }
+        }
+        public static bool Update(Usuarios Entidad, bool UpdatePassword)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                var RegistroBD = bd.Usuarios.Find(Entidad.IdUsuario);
+                RegistroBD.Nombre = Entidad.Nombre;
+                RegistroBD.Correo = Entidad.Correo;
+                RegistroBD.UserName = Entidad.UserName;
+                if (UpdatePassword)
+                {
+                    RegistroBD.Password = Entidad.Password;
+                }
+                RegistroBD.IdRol = Entidad.IdRol;
+                RegistroBD.UsuarioActualiza = Entidad.UsuarioActualiza;
+                RegistroBD.FechaActualizacion = DateTime.Now;
+                return bd.SaveChanges() > 0;
+            }
+        }
+        public static bool ExisteUserNameUpdate(string UserName, int IdRegistro)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                return bd.Usuarios.Where(a => a.UserName.ToLower() == UserName.ToLower() && a.IdUsuario != IdRegistro).Count() > 0;
             }
         }
     }
