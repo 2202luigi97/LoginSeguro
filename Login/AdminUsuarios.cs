@@ -2,13 +2,9 @@
 using EL;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Utilidades;
 
@@ -39,7 +35,7 @@ namespace Login
             {
                 ListaUsuarios = BL_Usuarios.vUsuarios();
             }
-
+            dgvUsuario.ClearSelection();
             dgvUsuario.AutoGenerateColumns = true;
             dgvUsuario.DataSource = ListaUsuarios;
             dgvUsuario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -217,6 +213,7 @@ namespace Login
                 txtCorreo.Text = vusuario.Correo;
                 txtUsuario.Text = vusuario.UserName;
                 txtPassword.Text = string.Empty;
+                btnBloquear.Text = (vusuario.Bloqueo) ? "Desbloquear" : "Bloquear";
 
 
             }
@@ -234,6 +231,7 @@ namespace Login
             cmbRoles.SelectedIndex = 0;
             IdUsuarioSeleccionado = 0;
             btnBloquear.Text = "Bloquear";
+            txtBuscar.Text=string.Empty;
         }
         private void Guardar()
         {
@@ -261,7 +259,7 @@ namespace Login
                         if (BL_Usuarios.Update(user, UpdatePassword))
                         {
                             LimpiarControles();
-                            //CargarGrid();
+                            CargarGrid();
                             MessageBox.Show("Registro actualizado correctamente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             return;
                         }
@@ -283,7 +281,7 @@ namespace Login
                     if (BL_Usuarios.Insert(user).IdUsuario > 0)
                     {
                         LimpiarControles();
-                        //CargarGrid();
+                        CargarGrid();
                         MessageBox.Show("Registro guardado correctamente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         return;
                     }
@@ -295,6 +293,34 @@ namespace Login
             catch
             {
                 MessageBox.Show("Error en el sistema", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void BloqueoUsuario()
+        {
+            try
+            {
+                int IdUsuarioSistema = (int)General.ValidarEnteros(IdUsuario);
+                if (!(IdUsuarioSistema > 0))
+                {
+                    MessageBox.Show("Permisos de administrador no encontrados", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                int IdRegistro = (int)General.ValidarEnteros(IdUsuarioSeleccionado);
+                bool Bloqueo = (btnBloquear.Text=="Desbloquear") ? false : true;
+
+                if (BL_Usuarios.BloquearCuentaUsuario(IdRegistro,Bloqueo,IdUsuarioSistema))
+                {
+                    string Operacion = (Bloqueo) ? "Bloqueado" : "Desbloqueado";
+                    CargarGrid();
+                    LimpiarControles();
+                    MessageBox.Show($"Usuario {Operacion} Correctamente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                MessageBox.Show("Error al realizar la operación", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch
+            {
+                MessageBox.Show("Error al realizar la operación", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         #endregion
@@ -329,8 +355,6 @@ namespace Login
         {
             dragging = false;
         }
-        #endregion
-
         private void dgvUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -366,6 +390,23 @@ namespace Login
             {
                 pbMostrarConstraseña.Image = Properties.Resources.PhEyeSlashThin;
             }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            textBox.Text = General.FormatearNombre(textBox.Text);
+        }
+        #endregion
+
+        private void btnBloquear_Click(object sender, EventArgs e)
+        {
+            BloqueoUsuario();
         }
     }
 }

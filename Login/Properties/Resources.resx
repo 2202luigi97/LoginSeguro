@@ -124,6 +124,9 @@
   <data name="MingcuteMailLine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MingcuteMailLine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MingcuteCloseFill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MingcuteCloseFill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MaterialSymbolsMinimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaterialSymbolsMinimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,11 +136,14 @@
   <data name="MdiCart (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MdiCart (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="desarrollador" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\desarrollador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MdiCart (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MdiCart (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="software-espia-unscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\software-espia-unscreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MingcuteCloseFill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MingcuteCloseFill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MaterialSymbolsMinimize (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaterialSymbolsMinimize (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +157,11 @@
   <data name="MdiWarehouse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MdiWarehouse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MdiCart (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MdiCart (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MaterialSymbolsMinimizeRounded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaterialSymbolsMinimizeRounded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FluentSubtract12Filled (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FluentSubtract12Filled (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MdiAccountLock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MdiAccountLock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,6 +178,9 @@
   <data name="MdiCart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MdiCart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="MaterialSymbolsChromeMinimizeRounded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaterialSymbolsChromeMinimizeRounded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PhEyeThin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PhEyeThin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -181,7 +193,7 @@
   <data name="MingcuteUser1Line" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MingcuteUser1Line.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="desarrollador" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\desarrollador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MaterialSymbolsCloseRounded" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaterialSymbolsCloseRounded.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

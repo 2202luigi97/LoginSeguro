@@ -93,6 +93,36 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FluentSubtract12Filled__1_ {
+            get {
+                object obj = ResourceManager.GetObject("FluentSubtract12Filled (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MaterialSymbolsChromeMinimizeRounded {
+            get {
+                object obj = ResourceManager.GetObject("MaterialSymbolsChromeMinimizeRounded", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MaterialSymbolsCloseRounded {
+            get {
+                object obj = ResourceManager.GetObject("MaterialSymbolsCloseRounded", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MaterialSymbolsMinimize {
             get {
                 object obj = ResourceManager.GetObject("MaterialSymbolsMinimize", resourceCulture);
@@ -106,6 +136,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap MaterialSymbolsMinimize__1_ {
             get {
                 object obj = ResourceManager.GetObject("MaterialSymbolsMinimize (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MaterialSymbolsMinimizeRounded {
+            get {
+                object obj = ResourceManager.GetObject("MaterialSymbolsMinimizeRounded", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

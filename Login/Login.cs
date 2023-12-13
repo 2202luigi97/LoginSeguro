@@ -149,8 +149,15 @@ namespace Login
                 pbMostrarConstraseña.Image = Properties.Resources.PhEyeSlashThin;
             }
         }
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMnmize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
         #endregion
-
-
     }
 }

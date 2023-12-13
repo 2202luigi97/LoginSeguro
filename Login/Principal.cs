@@ -2,10 +2,7 @@
 using EL;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 using Utilidades;
 using static EL.Enums;
@@ -71,28 +68,34 @@ namespace Login
 
             try
             {
-                if (IdUsuario <= 0 || IdRol <= 0)
+                int IdUsuarioSesión = (int)General.ValidarEnteros(IdUsuario);
+                int IdRolSesión = (int)General.ValidarEnteros(IdRol);
+                if (!(IdUsuarioSesión > 0))
+                {
+                    AbandonarSesión();
+                    return false;
+                }
+                if (!(IdRolSesión > 0))
                 {
                     AbandonarSesión();
                     return false;
                 }
 
-                Usuarios user = BL_Usuarios.Registro(IdUsuario);
+                Usuarios user = BL_Usuarios.Registro(IdUsuarioSesión);
                 if (user == null)
                 {
-                    ;
                     AbandonarSesión();
                     return false;
                 }
 
-                if (user.IdRol != IdRol)
+                if (user.IdRol != IdRolSesión)
                 {
                     AbandonarSesión();
                     return false;
                 }
 
-                List<RolFormulario> FormularioUser = BL_RolFormulario.List(IdRol);
-                if (FormularioUser == null || FormularioUser.Count == 0)
+                List<RolFormulario> FormularioUser = BL_RolFormulario.List(IdRolSesión);
+                if (!(FormularioUser.Count > 0))
                 {
                     AbandonarSesión();
                     MessageBox.Show("Estimado usuario, No cuenta con permisos necesarios para ingresar a ningun formulario", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -133,15 +136,13 @@ namespace Login
             }
 
         }
-
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            //tabControl1.SelectedTab = tbpageVentas;
+            
         }
-
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            //tabControl1.SelectedTab = tbpageInventario;
+            
         }
         private void btnAdmin_Click(object sender, EventArgs e)
         {
@@ -149,32 +150,14 @@ namespace Login
             admin.IdUsuario = IdUsuario;
             admin.ShowDialog();
         }
-        private void dgvUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-
-        #endregion
-
-        private void btnGuardar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void pbMostrarConstraseña_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void btnMnmize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        #endregion
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbnombre = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
@@ -197,8 +198,8 @@
             this.btnMnmize.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMnmize.FlatAppearance.BorderSize = 0;
             this.btnMnmize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMnmize.Image = global::Login.Properties.Resources.FluentSubtract12Filled;
-            this.btnMnmize.Location = new System.Drawing.Point(896, 5);
+            this.btnMnmize.Image = global::Login.Properties.Resources.FluentSubtract12Filled__1_;
+            this.btnMnmize.Location = new System.Drawing.Point(905, 5);
             this.btnMnmize.Name = "btnMnmize";
             this.btnMnmize.Size = new System.Drawing.Size(44, 26);
             this.btnMnmize.TabIndex = 3;
@@ -211,10 +212,10 @@
             this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Image = global::Login.Properties.Resources.MingcuteCloseFill;
-            this.btnCerrar.Location = new System.Drawing.Point(940, 5);
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(949, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(44, 26);
+            this.btnCerrar.Size = new System.Drawing.Size(35, 26);
             this.btnCerrar.TabIndex = 2;
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -228,6 +229,7 @@
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";

@@ -123,6 +123,7 @@ namespace DAL
                 var Consulta = (from tblUsuarios in bd.Usuarios
                                 join tblRoles in bd.Roles on tblUsuarios.IdRol equals tblRoles.IdRol
                                 where tblUsuarios.Activo == Activo && tblRoles.Activo == Activo
+                                orderby tblUsuarios.Nombre ascending
                                 select new vUsuarios
                                 {
                                     IdUsuario = tblUsuarios.IdUsuario,
@@ -185,5 +186,6 @@ namespace DAL
                 return bd.Usuarios.Where(a => a.UserName.ToLower() == UserName.ToLower() && a.IdUsuario != IdRegistro).Count() > 0;
             }
         }
+
     }
 }

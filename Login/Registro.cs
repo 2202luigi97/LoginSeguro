@@ -1,6 +1,7 @@
 ﻿using BL;
 using EL;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Utilidades;
 using static EL.Enums;
@@ -9,6 +10,9 @@ namespace Login
 {
     public partial class Registro : Form
     {
+        private bool isDragging = false;
+        private Point lastCursorPos;
+        private Point lastFormPos;
         public Registro()
         {
             InitializeComponent();
@@ -139,16 +143,54 @@ namespace Login
         }
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
         }
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            
         }
 
 
 
         #endregion
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMnmize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = true;
+                lastCursorPos = Cursor.Position;
+                lastFormPos = Location;
+            }
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                int deltaX = Cursor.Position.X - lastCursorPos.X;
+                int deltaY = Cursor.Position.Y - lastCursorPos.Y;
+
+                Location = new Point(lastFormPos.X + deltaX, lastFormPos.Y + deltaY);
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                isDragging = false;
+            }
+        }
     }
 }
