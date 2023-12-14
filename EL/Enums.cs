@@ -18,8 +18,10 @@ namespace EL
             Administrador = 1,
             Jefe_Ventas = 2,
             Jefe_Almacen = 3,
-            Gerente_General = 4,
-            Invitado = 5
+            Caja = 4,
+            Invitado = 5,
+            Bodega = 6,
+            Gerente_General = 7
         }
         //Definir valor de los Permisos
         public enum ePermisos
@@ -29,7 +31,12 @@ namespace EL
             BloquearUsuario=3,
             CrearFactura = 4,
             EditarFactura = 5,
-            AnularFactura = 7
+            AnularFactura = 7,
+            ReporteVenta = 8,
+            ReporteInventario = 9,
+            AgregarInventario = 10,
+            EditarInventario = 11,
+            AnularInventario = 12
         }
 
     }

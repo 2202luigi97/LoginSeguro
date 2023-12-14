@@ -3,7 +3,6 @@ using EL;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using Utilidades;
@@ -13,16 +12,13 @@ namespace Login
     public partial class AdminUsuarios : Form
     {
         public int IdUsuario { get; set; }
-        private bool dragging = false;
-        private Point dragCursorPoint;
-        private Point dragFormPoint;
         int IdUsuarioSeleccionado = 0;
+
+        #region Métodos
         public AdminUsuarios()
         {
             InitializeComponent();
         }
-
-        #region Métodos
         private void CargarGrid()
         {
             List<vUsuarios> ListaUsuarios;
@@ -370,27 +366,6 @@ namespace Login
             CargarGrid();
             CargarRoles();
         }
-        private void AdminUsuarios_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                dragging = true;
-                dragCursorPoint = Cursor.Position;
-                dragFormPoint = this.Location;
-            }
-        }
-        private void AdminUsuarios_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (dragging)
-            {
-                Point dif = Point.Subtract(Cursor.Position, new Size(dragCursorPoint));
-                this.Location = Point.Add(dragFormPoint, new Size(dif));
-            }
-        }
-        private void AdminUsuarios_MouseUp(object sender, MouseEventArgs e)
-        {
-            dragging = false;
-        }
         private void dgvUsuario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -453,8 +428,6 @@ namespace Login
                 CargarGrid();
             }
         }
-        #endregion
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             AnularUsuario();
@@ -464,5 +437,6 @@ namespace Login
         {
             LimpiarControles();
         }
+        #endregion
     }
 }

@@ -16,12 +16,12 @@ namespace Login
         public string Nombre { get; set; }
         public string NombreRol { get; set; }
         public int IdUsuarioSeleccionado = 0;
+        #region Metodos y Funciones
         public Principal()
         {
             InitializeComponent();
 
         }
-        #region Metodos y Funciones
         private void VerificarPermisosFormularios(List<RolFormulario> rolForms)
         {
             btnAdmin.Enabled = false;
@@ -111,6 +111,12 @@ namespace Login
                 return false;
             }
         }
+        private void EstiloFormulario()
+        {
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
+                                  (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
+        }
         #endregion
         #region Eventos
         private void Principal_Load(object sender, EventArgs e)
@@ -120,18 +126,11 @@ namespace Login
             lbnombre.Text = NombreRol;
 
         }
-        private void EstiloFormulario()
-        {
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
-                                  (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);
-        }
         private void btnlogout_Click(object sender, EventArgs e)
         {
             DialogResult resultado = MessageBox.Show("Esta seguro de cerrar la sesión?", "cerrar sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (resultado == DialogResult.Yes)
             {
-                MessageBox.Show("Sesión cerrada");
                 AbandonarSesión();
             }
 
@@ -146,7 +145,10 @@ namespace Login
         }
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            
+            Inventario inv = new Inventario();
+            inv.IdUsuario = IdUsuario;
+            inv.IdRol = IdRol;
+            inv.ShowDialog();
         }
         private void btnAdmin_Click(object sender, EventArgs e)
         {
@@ -161,6 +163,13 @@ namespace Login
         private void btnMnmize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            Reporte re = new Reporte();
+            re.IdUsuario = IdUsuario;
+            re.IdRol = IdRol;
+            re.ShowDialog();
         }
         #endregion
     }

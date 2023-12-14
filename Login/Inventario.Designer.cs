@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class Ventas
+    partial class Inventario
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
             this.panel1.Size = new System.Drawing.Size(846, 38);
-            this.panel1.TabIndex = 41;
+            this.panel1.TabIndex = 42;
             // 
             // lbnombre
             // 
@@ -59,9 +59,9 @@
             this.lbnombre.ForeColor = System.Drawing.SystemColors.Menu;
             this.lbnombre.Location = new System.Drawing.Point(8, 5);
             this.lbnombre.Name = "lbnombre";
-            this.lbnombre.Size = new System.Drawing.Size(62, 26);
+            this.lbnombre.Size = new System.Drawing.Size(90, 26);
             this.lbnombre.TabIndex = 1;
-            this.lbnombre.Text = "Ventas";
+            this.lbnombre.Text = "Inventario";
             this.lbnombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnCerrar
@@ -89,7 +89,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 38);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(846, 536);
-            this.panel2.TabIndex = 42;
+            this.panel2.TabIndex = 43;
             // 
             // btnEditar
             // 
@@ -107,7 +107,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(134, 34);
             this.btnEditar.TabIndex = 44;
-            this.btnEditar.Text = "Editar Factura";
+            this.btnEditar.Text = "Editar Ingreso";
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnAnular
@@ -126,7 +126,7 @@
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(134, 34);
             this.btnAnular.TabIndex = 3;
-            this.btnAnular.Text = "Anular Factura";
+            this.btnAnular.Text = "Anular Ingreso";
             this.btnAnular.UseVisualStyleBackColor = true;
             // 
             // btnNueva
@@ -145,10 +145,10 @@
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(134, 34);
             this.btnNueva.TabIndex = 1;
-            this.btnNueva.Text = "Nueva Factura";
+            this.btnNueva.Text = "Nuevo Ingreso";
             this.btnNueva.UseVisualStyleBackColor = false;
             // 
-            // Ventas
+            // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,10 +156,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Ventas";
+            this.Name = "Inventario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ventas";
-            this.Load += new System.EventHandler(this.Ventas_Load);
+            this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.Inventario_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -172,8 +172,8 @@
         private System.Windows.Forms.Label lbnombre;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnAnular;
         private System.Windows.Forms.Button btnNueva;
-        private System.Windows.Forms.Button btnEditar;
     }
 }

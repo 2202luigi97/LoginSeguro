@@ -425,9 +425,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin. Usuarios";
             this.Load += new System.EventHandler(this.AdminUsuarios_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminUsuarios_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminUsuarios_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.AdminUsuarios_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

@@ -13,11 +13,11 @@ namespace Login
         private Point lastCursorPos;
         private Point lastFormPos;
 
+        #region Metodos y Funciones
         public Login()
         {
             InitializeComponent();
         }
-        #region Metodos y Funciones
         private int intentosFallidos = 0;
         private bool validarAccesos()
         {
@@ -158,11 +158,9 @@ namespace Login
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        #endregion
-
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
-            if (txtUsuario.Text=="Nombre de usuario")
+            if (txtUsuario.Text == "Nombre de usuario")
             {
                 txtUsuario.Text = string.Empty;
                 txtUsuario.ForeColor = Color.Black;
@@ -171,7 +169,7 @@ namespace Login
 
         private void txtUsuario_Leave(object sender, EventArgs e)
         {
-            if (txtUsuario.Text ==string.Empty) 
+            if (txtUsuario.Text == string.Empty)
             {
                 txtUsuario.Text = "Nombre de usuario";
                 txtUsuario.ForeColor = Color.LightGray;
@@ -180,7 +178,7 @@ namespace Login
 
         private void txtPassword_Enter(object sender, EventArgs e)
         {
-            if (txtPassword.Text=="Contraseña")
+            if (txtPassword.Text == "Contraseña")
             {
                 txtPassword.Text = string.Empty;
                 txtPassword.ForeColor = Color.Black;
@@ -197,5 +195,6 @@ namespace Login
                 txtPassword.UseSystemPasswordChar = false;
             }
         }
+        #endregion
     }
 }

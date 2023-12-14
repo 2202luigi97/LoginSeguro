@@ -4,7 +4,6 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using Utilidades;
-using static EL.Enums;
 
 namespace Login
 {
@@ -13,12 +12,12 @@ namespace Login
         private bool isDragging = false;
         private Point lastCursorPos;
         private Point lastFormPos;
+
+        #region Metodos y Funciones
         public Registro()
         {
             InitializeComponent();
         }
-
-        #region Metodos y Funciones
         private void ResetControles()
         {
             txtNombre.Text=string.Empty;
@@ -96,7 +95,7 @@ namespace Login
                     if (BL_Usuarios.RegistrarUsuarioInvitado(user).IdUsuario>0) 
                     {
                         ResetControles();
-                        MessageBox.Show("Registro con exito, pongase en contacto con el admin para que le asigne un rol", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show($"Usuario {user.UserName} creado con exito, pongase en contacto con el admin para que le asigne un rol", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
                         Login lo = new Login();
                         lo.Show();
@@ -141,19 +140,6 @@ namespace Login
             TextBox textBox = (TextBox)sender;
             textBox.Text = General.FormatearNombre(textBox.Text);
         }
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            
-        }
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-
-
-        #endregion
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -192,5 +178,6 @@ namespace Login
                 isDragging = false;
             }
         }
+        #endregion
     }
 }
