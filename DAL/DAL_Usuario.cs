@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using Utilidades;
@@ -82,11 +83,15 @@ namespace DAL
             using (BDContexto bd = new BDContexto())
             {
                 var Registro = bd.Usuarios.Find(IdRegistro);
-                Registro.Bloqueo = Bloquear;
-                if (!Bloquear) { Registro.Contador = 0; }
-                Registro.UsuarioActualiza = UsuarioActualiza;
-                Registro.FechaActualizacion = DateTime.Now;
-                return bd.SaveChanges() > 0;
+                if (Registro != null)
+                {
+                    Registro.Bloqueo = Bloquear;
+                    if (!Bloquear) { Registro.Contador = 0; }
+                    Registro.UsuarioActualiza = UsuarioActualiza;
+                    Registro.FechaActualizacion = DateTime.Now;
+                    return bd.SaveChanges() > 0;
+                }
+                return false;
             }
         }
         public static bool SumarIntentosFallido(int IdRegistro)
@@ -184,6 +189,17 @@ namespace DAL
             using (BDContexto bd = new BDContexto())
             {
                 return bd.Usuarios.Where(a => a.UserName.ToLower() == UserName.ToLower() && a.IdUsuario != IdRegistro).Count() > 0;
+            }
+        }
+        public static bool Delete(Usuarios Entidad)
+        {
+            using (BDContexto bd = new BDContexto())
+            {
+                var RegistroBD = bd.Usuarios.Find(Entidad.IdUsuario);
+                RegistroBD.Activo = false;
+                RegistroBD.UsuarioActualiza = Entidad.UsuarioActualiza;
+                RegistroBD.FechaActualizacion = DateTime.Now;
+                return bd.SaveChanges() > 0;
             }
         }
 

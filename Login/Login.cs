@@ -142,11 +142,11 @@ namespace Login
 
             if (txtPassword.UseSystemPasswordChar)
             {
-                pbMostrarConstraseña.Image = Properties.Resources.PhEyeThin;
+                pbMostrarConstraseña.Image = Properties.Resources.MdiEyeOutline;
             }
             else
             {
-                pbMostrarConstraseña.Image = Properties.Resources.PhEyeSlashThin;
+                pbMostrarConstraseña.Image = Properties.Resources.MdiEyeOffOutline;
             }
         }
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -159,5 +159,43 @@ namespace Login
             this.WindowState = FormWindowState.Minimized;
         }
         #endregion
+
+        private void txtUsuario_Enter(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text=="Nombre de usuario")
+            {
+                txtUsuario.Text = string.Empty;
+                txtUsuario.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text ==string.Empty) 
+            {
+                txtUsuario.Text = "Nombre de usuario";
+                txtUsuario.ForeColor = Color.LightGray;
+            }
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text=="Contraseña")
+            {
+                txtPassword.Text = string.Empty;
+                txtPassword.ForeColor = Color.Black;
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == string.Empty)
+            {
+                txtPassword.Text = "Contraseña";
+                txtPassword.ForeColor = Color.LightGray;
+                txtPassword.UseSystemPasswordChar = false;
+            }
+        }
     }
 }

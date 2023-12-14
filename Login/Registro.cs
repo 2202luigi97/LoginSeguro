@@ -119,11 +119,11 @@ namespace Login
 
             if (txtPassword.UseSystemPasswordChar)
             {
-                pbMostrarConstraseña.Image = Properties.Resources.PhEyeThin;
+                pbMostrarConstraseña.Image = Properties.Resources.MdiEyeOutline;
             }
             else
             {
-                pbMostrarConstraseña.Image = Properties.Resources.PhEyeSlashThin;
+                pbMostrarConstraseña.Image = Properties.Resources.MdiEyeOffOutline;
             }
         }
         private void button1_Click(object sender, EventArgs e)

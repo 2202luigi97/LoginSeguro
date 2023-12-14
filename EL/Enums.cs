@@ -24,11 +24,12 @@ namespace EL
         //Definir valor de los Permisos
         public enum ePermisos
         {
-            Escritura = 1,
-            Anular = 2,
-            Bloqueo = 3,
-            Facturar = 4,
-            Reporte = 5
+            AgregarUsuario = 1,
+            AnularUsuario = 2,
+            BloquearUsuario=3,
+            CrearFactura = 4,
+            EditarFactura = 5,
+            AnularFactura = 7
         }
 
     }

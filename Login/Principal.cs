@@ -117,7 +117,7 @@ namespace Login
         {
             EstiloFormulario();
             ValidarSesión();
-            lbnombre.Text = "Bienvenid@ " + Nombre + "   " + NombreRol;
+            lbnombre.Text = NombreRol;
 
         }
         private void EstiloFormulario()
@@ -138,7 +138,11 @@ namespace Login
         }
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            
+            Ventas ven = new Ventas();
+            ven.IdUsuario = IdUsuario;
+            ven.IdRol = IdRol;
+            ven.ShowDialog();
+           
         }
         private void btnInventario_Click(object sender, EventArgs e)
         {

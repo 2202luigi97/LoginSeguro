@@ -35,7 +35,6 @@ namespace Login
             {
                 ListaUsuarios = BL_Usuarios.vUsuarios();
             }
-            dgvUsuario.ClearSelection();
             dgvUsuario.AutoGenerateColumns = true;
             dgvUsuario.DataSource = ListaUsuarios;
             dgvUsuario.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -208,7 +207,6 @@ namespace Login
 
                 cmbRoles.SelectedValue = vusuario.IdRol;
                 IdUsuarioSeleccionado = vusuario.IdUsuario;
-                txtBuscar.Text = vusuario.IdUsuario.ToString();
                 txtNombre.Text = vusuario.Nombre;
                 txtCorreo.Text = vusuario.Correo;
                 txtUsuario.Text = vusuario.UserName;
@@ -232,6 +230,8 @@ namespace Login
             IdUsuarioSeleccionado = 0;
             btnBloquear.Text = "Bloquear";
             txtBuscar.Text=string.Empty;
+            dgvUsuario.ClearSelection();
+            CargarGrid();
         }
         private void Guardar()
         {
@@ -323,6 +323,42 @@ namespace Login
                 MessageBox.Show("Error al realizar la operación", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        private void AnularUsuario()
+        {
+            try
+            {
+                int IdUsuarioSistema = (int)General.ValidarEnteros(IdUsuario);
+
+                if (!(IdUsuarioSistema > 0 ))
+                {
+                    MessageBox.Show("Permisos de administrador no encontrados", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int IdRegistro = (int)General.ValidarEnteros(IdUsuarioSeleccionado);
+                Usuarios user = new Usuarios();
+
+                if (IdRegistro > 0) 
+                {
+                    user.IdUsuario = IdRegistro;
+                    user.UsuarioActualiza = IdUsuarioSistema;
+                    if (BL_Usuarios.Delete(user)) 
+                    {
+                        LimpiarControles();
+                        CargarGrid();
+                        MessageBox.Show("Usuario eliminado correctamente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    MessageBox.Show("Error al eliminar el usuario", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                MessageBox.Show("Seleccione un usuario", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch
+            {
+                MessageBox.Show("Error al eliminar", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         #endregion
         #region Eventos
         private void button1_Click(object sender, EventArgs e)
@@ -384,11 +420,11 @@ namespace Login
 
             if (txtPassword.UseSystemPasswordChar)
             {
-                pbMostrarConstraseña.Image = Properties.Resources.PhEyeThin;
+                pbMostrarConstraseña.Image = Properties.Resources.MdiEyeOutline;
             }
             else
             {
-                pbMostrarConstraseña.Image = Properties.Resources.PhEyeSlashThin;
+                pbMostrarConstraseña.Image = Properties.Resources.MdiEyeOffOutline;
             }
         }
 
@@ -402,11 +438,31 @@ namespace Login
             TextBox textBox = (TextBox)sender;
             textBox.Text = General.FormatearNombre(textBox.Text);
         }
-        #endregion
-
         private void btnBloquear_Click(object sender, EventArgs e)
         {
             BloqueoUsuario();
+        }
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            CargarGrid();
+        }
+        private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (!(string.IsNullOrEmpty(txtBuscar.Text) || string.IsNullOrWhiteSpace(txtBuscar.Text)) && txtBuscar.Text.Length > 2)
+            {
+                CargarGrid();
+            }
+        }
+        #endregion
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            AnularUsuario();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            LimpiarControles();
         }
     }
 }

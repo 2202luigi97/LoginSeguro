@@ -57,6 +57,7 @@
     <Compile Include="DAL_RolFormulario.cs" />
     <Compile Include="DAL_Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DAL_RolPermisos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

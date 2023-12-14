@@ -63,49 +63,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap desarrollador {
-            get {
-                object obj = ResourceManager.GetObject("desarrollador", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FluentMdl2ChromeMinimize {
-            get {
-                object obj = ResourceManager.GetObject("FluentMdl2ChromeMinimize", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FluentSubtract12Filled {
-            get {
-                object obj = ResourceManager.GetObject("FluentSubtract12Filled", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap FluentSubtract12Filled__1_ {
             get {
                 object obj = ResourceManager.GetObject("FluentSubtract12Filled (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MaterialSymbolsChromeMinimizeRounded {
-            get {
-                object obj = ResourceManager.GetObject("MaterialSymbolsChromeMinimizeRounded", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +83,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MaterialSymbolsMinimize {
+        internal static System.Drawing.Bitmap MdiAccount {
             get {
-                object obj = ResourceManager.GetObject("MaterialSymbolsMinimize", resourceCulture);
+                object obj = ResourceManager.GetObject("MdiAccount", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +93,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MaterialSymbolsMinimize__1_ {
+        internal static System.Drawing.Bitmap MdiAccount1 {
             get {
-                object obj = ResourceManager.GetObject("MaterialSymbolsMinimize (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("MdiAccount1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +103,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MaterialSymbolsMinimizeRounded {
+        internal static System.Drawing.Bitmap MdiAccountGroup {
             get {
-                object obj = ResourceManager.GetObject("MaterialSymbolsMinimizeRounded", resourceCulture);
+                object obj = ResourceManager.GetObject("MdiAccountGroup", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +133,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MdiCart {
+        internal static System.Drawing.Bitmap MdiEmail {
             get {
-                object obj = ResourceManager.GetObject("MdiCart", resourceCulture);
+                object obj = ResourceManager.GetObject("MdiEmail", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +143,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MdiCart__1_ {
+        internal static System.Drawing.Bitmap MdiEyeOffOutline {
             get {
-                object obj = ResourceManager.GetObject("MdiCart (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("MdiEyeOffOutline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +153,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MdiCart__2_ {
+        internal static System.Drawing.Bitmap MdiEyeOutline {
             get {
-                object obj = ResourceManager.GetObject("MdiCart (2)", resourceCulture);
+                object obj = ResourceManager.GetObject("MdiEyeOutline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +163,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MdiFileChart {
+        internal static System.Drawing.Bitmap MdiFormTextboxPassword {
             get {
-                object obj = ResourceManager.GetObject("MdiFileChart", resourceCulture);
+                object obj = ResourceManager.GetObject("MdiFormTextboxPassword", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +173,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MdiSecurity {
+        internal static System.Drawing.Bitmap MdiFormTextboxPassword1 {
             get {
-                object obj = ResourceManager.GetObject("MdiSecurity", resourceCulture);
+                object obj = ResourceManager.GetObject("MdiFormTextboxPassword1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +183,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MdiWarehouse {
+        internal static System.Drawing.Bitmap MdiKey {
             get {
-                object obj = ResourceManager.GetObject("MdiWarehouse", resourceCulture);
+                object obj = ResourceManager.GetObject("MdiKey", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +193,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MingcuteCloseFill {
+        internal static System.Drawing.Bitmap MdiKey1 {
             get {
-                object obj = ResourceManager.GetObject("MingcuteCloseFill", resourceCulture);
+                object obj = ResourceManager.GetObject("MdiKey1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,79 +203,9 @@ namespace Login.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MingcuteKey2Line {
+        internal static System.Drawing.Bitmap TdesignSearch {
             get {
-                object obj = ResourceManager.GetObject("MingcuteKey2Line", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MingcuteMailLine {
-            get {
-                object obj = ResourceManager.GetObject("MingcuteMailLine", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MingcuteMinimizeFill {
-            get {
-                object obj = ResourceManager.GetObject("MingcuteMinimizeFill", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap MingcuteUser1Line {
-            get {
-                object obj = ResourceManager.GetObject("MingcuteUser1Line", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PhEyeSlashThin {
-            get {
-                object obj = ResourceManager.GetObject("PhEyeSlashThin", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PhEyeThin {
-            get {
-                object obj = ResourceManager.GetObject("PhEyeThin", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap software_espia {
-            get {
-                object obj = ResourceManager.GetObject("software-espia", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap software_espia_unscreen {
-            get {
-                object obj = ResourceManager.GetObject("software-espia-unscreen", resourceCulture);
+                object obj = ResourceManager.GetObject("TdesignSearch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -83,5 +83,9 @@ namespace BL
         {
             return DAL_Usuario.ExisteUserNameUpdate(UserName, IdRegistro);
         }
+        public static bool Delete(Usuarios Entidad)
+        {
+            return DAL_Usuario.Delete(Entidad);
+        }
     }
 }
