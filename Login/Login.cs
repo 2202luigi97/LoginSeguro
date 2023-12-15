@@ -18,7 +18,6 @@ namespace Login
         {
             InitializeComponent();
         }
-        private int intentosFallidos = 0;
         private bool validarAccesos()
         {
             if (string.IsNullOrEmpty(txtUsuario.Text) || string.IsNullOrWhiteSpace(txtUsuario.Text))
@@ -44,8 +43,8 @@ namespace Login
             byte[] password = BL_Usuarios.Encrypt(txtPassword.Text);
             if (!BL_Usuarios.ValidarCredenciales(txtUsuario.Text, password))
             {
-                intentosFallidos++;
-                MessageBox.Show($"Credenciales Incorrectas. Le quedan: {3-intentosFallidos} intentos. si los supera su cuenta será bloqueada", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                int intentosFallidos = BL_Usuarios.CantidadIntentosFallidos(txtUsuario.Text);
+                MessageBox.Show($"Credenciales Incorrectas. lleva {intentosFallidos + 1} intentos. si llega a los 3 intentos su cuenta será bloqueada", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Usuarios user = BL_Usuarios.ExisteUsuario_x_UserName(txtUsuario.Text);
                 if (BL_Usuarios.CantidadIntentosFallidos(txtUsuario.Text) >= 2)
                 {
@@ -55,6 +54,7 @@ namespace Login
                 if (user != null)
                 {
                     BL_Usuarios.SumarIntentosFallido(user.IdUsuario);
+                    
                 }
                 return false;
             }
@@ -70,7 +70,6 @@ namespace Login
                     MessageBox.Show("Estimado usuario usted no cuenta con un rol en el sistema, comuniquese con el administrador", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
-                intentosFallidos = 0;
                 this.Hide();
                 Principal re = new Principal();
                 re.IdUsuario = usuarioautenticado.IdUsuario;

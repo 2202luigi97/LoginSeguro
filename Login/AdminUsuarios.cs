@@ -226,8 +226,8 @@ namespace Login
             IdUsuarioSeleccionado = 0;
             btnBloquear.Text = "Bloquear";
             txtBuscar.Text=string.Empty;
-            dgvUsuario.ClearSelection();
             CargarGrid();
+            dgvUsuario.ClearSelection();
         }
         private void Guardar()
         {
@@ -256,10 +256,10 @@ namespace Login
                         {
                             LimpiarControles();
                             CargarGrid();
-                            MessageBox.Show("Registro actualizado correctamente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            MessageBox.Show("Usuario actualizado correctamente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             return;
                         }
-                        MessageBox.Show("Registro no actualizado", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Usuario no actualizado", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                     return;
@@ -278,10 +278,10 @@ namespace Login
                     {
                         LimpiarControles();
                         CargarGrid();
-                        MessageBox.Show("Registro guardado correctamente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        MessageBox.Show("Usuario creado correctamente", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         return;
                     }
-                    MessageBox.Show("Registro no actualizado", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Usuario no actualizado", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 MessageBox.Show("No se realizó ninguna operación", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
