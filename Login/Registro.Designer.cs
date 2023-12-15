@@ -30,29 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registro));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbMostrarConstraseña = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMnmize = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbMostrarConstraseña = new System.Windows.Forms.PictureBox();
-            this.btnMnmize = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMostrarConstraseña)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -84,6 +84,19 @@
             this.panel2.Size = new System.Drawing.Size(352, 426);
             this.panel2.TabIndex = 2;
             // 
+            // pbMostrarConstraseña
+            // 
+            this.pbMostrarConstraseña.BackColor = System.Drawing.Color.White;
+            this.pbMostrarConstraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbMostrarConstraseña.Image = global::Login.Properties.Resources.MdiEyeOutline;
+            this.pbMostrarConstraseña.Location = new System.Drawing.Point(305, 274);
+            this.pbMostrarConstraseña.Name = "pbMostrarConstraseña";
+            this.pbMostrarConstraseña.Size = new System.Drawing.Size(22, 22);
+            this.pbMostrarConstraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMostrarConstraseña.TabIndex = 21;
+            this.pbMostrarConstraseña.TabStop = false;
+            this.pbMostrarConstraseña.Click += new System.EventHandler(this.pbMostrarConstraseña_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
@@ -100,6 +113,34 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseUp);
+            // 
+            // btnMnmize
+            // 
+            this.btnMnmize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMnmize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMnmize.FlatAppearance.BorderSize = 0;
+            this.btnMnmize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMnmize.Image = global::Login.Properties.Resources.FluentSubtract12Filled__1_;
+            this.btnMnmize.Location = new System.Drawing.Point(277, 5);
+            this.btnMnmize.Name = "btnMnmize";
+            this.btnMnmize.Size = new System.Drawing.Size(35, 28);
+            this.btnMnmize.TabIndex = 5;
+            this.btnMnmize.UseVisualStyleBackColor = true;
+            this.btnMnmize.Click += new System.EventHandler(this.btnMnmize_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
+            this.btnCerrar.Location = new System.Drawing.Point(312, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(35, 28);
+            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label5
             // 
@@ -119,6 +160,16 @@
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(269, 26);
             this.txtCorreo.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Login.Properties.Resources.MdiEmail;
+            this.pictureBox3.Location = new System.Drawing.Point(26, 140);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 19;
+            this.pictureBox3.TabStop = false;
             // 
             // label2
             // 
@@ -160,10 +211,10 @@
             // button1
             // 
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(94)))), ((int)(((byte)(215)))));
             this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(94)))), ((int)(((byte)(215)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(94)))), ((int)(((byte)(215)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
@@ -174,6 +225,16 @@
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Login.Properties.Resources.MdiFormTextboxPassword;
+            this.pictureBox4.Location = new System.Drawing.Point(26, 273);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
             // 
             // label8
             // 
@@ -204,6 +265,16 @@
             this.btnlogin.UseVisualStyleBackColor = true;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Login.Properties.Resources.MdiAccount;
+            this.pictureBox2.Location = new System.Drawing.Point(26, 206);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -214,6 +285,16 @@
             this.label4.Size = new System.Drawing.Size(64, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Usuario";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Login.Properties.Resources.MdiAccount1;
+            this.pictureBox1.Location = new System.Drawing.Point(26, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // label3
             // 
@@ -237,87 +318,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "REGISTRO";
             // 
-            // pbMostrarConstraseña
-            // 
-            this.pbMostrarConstraseña.BackColor = System.Drawing.Color.White;
-            this.pbMostrarConstraseña.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbMostrarConstraseña.Image = global::Login.Properties.Resources.MdiEyeOutline;
-            this.pbMostrarConstraseña.Location = new System.Drawing.Point(305, 274);
-            this.pbMostrarConstraseña.Name = "pbMostrarConstraseña";
-            this.pbMostrarConstraseña.Size = new System.Drawing.Size(22, 22);
-            this.pbMostrarConstraseña.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMostrarConstraseña.TabIndex = 21;
-            this.pbMostrarConstraseña.TabStop = false;
-            this.pbMostrarConstraseña.Click += new System.EventHandler(this.pbMostrarConstraseña_Click);
-            // 
-            // btnMnmize
-            // 
-            this.btnMnmize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMnmize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMnmize.FlatAppearance.BorderSize = 0;
-            this.btnMnmize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMnmize.Image = global::Login.Properties.Resources.FluentSubtract12Filled__1_;
-            this.btnMnmize.Location = new System.Drawing.Point(277, 5);
-            this.btnMnmize.Name = "btnMnmize";
-            this.btnMnmize.Size = new System.Drawing.Size(35, 28);
-            this.btnMnmize.TabIndex = 5;
-            this.btnMnmize.UseVisualStyleBackColor = true;
-            this.btnMnmize.Click += new System.EventHandler(this.btnMnmize_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(312, 5);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(35, 28);
-            this.btnCerrar.TabIndex = 4;
-            this.btnCerrar.UseVisualStyleBackColor = true;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Login.Properties.Resources.MdiEmail;
-            this.pictureBox3.Location = new System.Drawing.Point(26, 140);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 19;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Login.Properties.Resources.MdiFormTextboxPassword;
-            this.pictureBox4.Location = new System.Drawing.Point(26, 273);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Login.Properties.Resources.MdiAccount;
-            this.pictureBox2.Location = new System.Drawing.Point(26, 206);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Login.Properties.Resources.MdiAccount1;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,9 +331,9 @@
             this.Text = "Registro";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMostrarConstraseña)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMostrarConstraseña)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

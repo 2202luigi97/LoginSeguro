@@ -49,7 +49,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(846, 38);
+            this.panel1.Size = new System.Drawing.Size(655, 38);
             this.panel1.TabIndex = 42;
             // 
             // lbnombre
@@ -70,7 +70,7 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = global::Login.Properties.Resources.MaterialSymbolsCloseRounded;
-            this.btnCerrar.Location = new System.Drawing.Point(804, 5);
+            this.btnCerrar.Location = new System.Drawing.Point(613, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(35, 26);
             this.btnCerrar.TabIndex = 2;
@@ -86,7 +86,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 38);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(846, 536);
+            this.panel2.Size = new System.Drawing.Size(655, 343);
             this.panel2.TabIndex = 43;
             // 
             // btnInventario
@@ -101,7 +101,7 @@
             this.btnInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventario.ForeColor = System.Drawing.Color.White;
-            this.btnInventario.Location = new System.Drawing.Point(427, 251);
+            this.btnInventario.Location = new System.Drawing.Point(333, 154);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(179, 34);
             this.btnInventario.TabIndex = 44;
@@ -120,7 +120,7 @@
             this.btnVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVenta.ForeColor = System.Drawing.Color.White;
-            this.btnVenta.Location = new System.Drawing.Point(224, 251);
+            this.btnVenta.Location = new System.Drawing.Point(130, 154);
             this.btnVenta.Name = "btnVenta";
             this.btnVenta.Size = new System.Drawing.Size(179, 34);
             this.btnVenta.TabIndex = 1;
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 574);
+            this.ClientSize = new System.Drawing.Size(655, 381);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

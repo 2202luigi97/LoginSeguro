@@ -50,7 +50,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(846, 38);
+            this.panel1.Size = new System.Drawing.Size(655, 38);
             this.panel1.TabIndex = 41;
             // 
             // lbnombre
@@ -71,7 +71,7 @@
             this.btnCerrar.FlatAppearance.BorderSize = 0;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Image = global::Login.Properties.Resources.MaterialSymbolsCloseRounded;
-            this.btnCerrar.Location = new System.Drawing.Point(804, 5);
+            this.btnCerrar.Location = new System.Drawing.Point(613, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(35, 26);
             this.btnCerrar.TabIndex = 2;
@@ -88,7 +88,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 38);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(846, 536);
+            this.panel2.Size = new System.Drawing.Size(655, 343);
             this.panel2.TabIndex = 42;
             // 
             // btnEditar
@@ -96,14 +96,14 @@
             this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(80)))), ((int)(((byte)(99)))));
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Enabled = false;
-            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(227)))), ((int)(((byte)(133)))));
             this.btnEditar.FlatAppearance.BorderSize = 3;
-            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(227)))), ((int)(((byte)(133)))));
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(227)))), ((int)(((byte)(133)))));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(341, 249);
+            this.btnEditar.Location = new System.Drawing.Point(249, 150);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(134, 34);
             this.btnEditar.TabIndex = 44;
@@ -114,15 +114,15 @@
             // 
             this.btnAnular.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAnular.Enabled = false;
-            this.btnAnular.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnAnular.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(72)))), ((int)(((byte)(57)))));
             this.btnAnular.FlatAppearance.BorderSize = 3;
             this.btnAnular.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnAnular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.btnAnular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnAnular.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(72)))), ((int)(((byte)(57)))));
+            this.btnAnular.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(72)))), ((int)(((byte)(57)))));
             this.btnAnular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnular.ForeColor = System.Drawing.Color.White;
-            this.btnAnular.Location = new System.Drawing.Point(514, 249);
+            this.btnAnular.Location = new System.Drawing.Point(422, 150);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(134, 34);
             this.btnAnular.TabIndex = 3;
@@ -141,7 +141,7 @@
             this.btnNueva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNueva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNueva.ForeColor = System.Drawing.Color.White;
-            this.btnNueva.Location = new System.Drawing.Point(179, 249);
+            this.btnNueva.Location = new System.Drawing.Point(87, 150);
             this.btnNueva.Name = "btnNueva";
             this.btnNueva.Size = new System.Drawing.Size(134, 34);
             this.btnNueva.TabIndex = 1;
@@ -152,7 +152,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 574);
+            this.ClientSize = new System.Drawing.Size(655, 381);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
